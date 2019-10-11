@@ -5,6 +5,7 @@ import (
 	"os"
 	"plugin"
 
+	"github.com/mem/go-plugin-modules/go-plugin-loader/api"
 	"golang.org/x/xerrors"
 )
 
@@ -44,6 +45,12 @@ func main() {
 		var pathError *os.PathError
 		if xerrors.As(err, &pathError) {
 			fmt.Println("Failed at path:", pathError.Path)
+		}
+
+		if err.Error() != api.Msg() {
+			fmt.Println("Unexpected mismatch between error and API message: %q vs %q",
+				err.Error(),
+				api.Msg())
 		}
 	}
 

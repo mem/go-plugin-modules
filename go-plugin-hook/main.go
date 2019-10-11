@@ -3,6 +3,7 @@ package main // import "github.com/mem/go-plugin-modules/go-plugin-hook"
 import (
 	"fmt"
 
+	"github.com/mem/go-plugin-modules/go-plugin-loader/api"
 	"golang.org/x/xerrors"
 )
 
@@ -28,7 +29,8 @@ func (m *MyError2) FormatError(p xerrors.Printer) error { // implements xerrors.
 }
 
 func (m *MyError2) Hook() error {
-	return &MyError2{Message: "oops", frame: xerrors.Caller(1)}
+	msg := api.Msg()
+	return &MyError2{Message: msg, frame: xerrors.Caller(1)}
 }
 
 var Hook MyError2
