@@ -23,7 +23,7 @@ go-plugin-loader/go-plugin-loader-trimpath-vendor: go-plugin-loader/main.go go-p
 	cd $(dir $@) && go build -trimpath -mod=vendor -o $(CURDIR)/$@ $(notdir $<)
 
 go-plugin-loader/go-plugin-loader-no-trimpath-vendor: go-plugin-loader/main.go go-plugin-loader/vendor/modules.txt
-	cd $(dir $@) && go build -trimpath -mod=vendor -o $(CURDIR)/$@ $(notdir $<)
+	cd $(dir $@) && go build -mod=vendor -o $(CURDIR)/$@ $(notdir $<)
 
 go-plugin-hook/vendor/modules.txt:
 	cd go-plugin-hook && go mod vendor
