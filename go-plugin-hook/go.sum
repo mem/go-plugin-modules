@@ -1,2 +1,4 @@
+github.com/mem/go-plugin-modules/go-plugin-loader v0.0.0-20191011171621-9c66d499b76c h1:GdY/fRH2z7sxV7q2/kUgqPjBxFaGAPhwiTMWIM9WtBk=
+github.com/mem/go-plugin-modules/go-plugin-loader v0.0.0-20191011171621-9c66d499b76c/go.mod h1:GJW0bz1yNVxDJ6t6nZNijoDj8K0LXlg0dsgyTA2jTbA=
 golang.org/x/xerrors v0.0.0-20191011141410-1b5146add898 h1:/atklqdjdhuosWIl6AIbOeHJjicWYPqR9bpxqxYG2pA=
 golang.org/x/xerrors v0.0.0-20191011141410-1b5146add898/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
